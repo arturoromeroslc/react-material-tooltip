@@ -17,11 +17,10 @@ class Tooltip extends Component {
   }
 
   render() {
-    const isActiveTooltip = this.state.isTooltipActive;
+    const isActiveTooltip = this.props.active;
 
     return (
       <div>
-        <span onMouseOver={this.handleShowTooltip} onMouseOut={this.handleHideTooltip} >Hello</span>
         {isActiveTooltip && this.props.children}
       </div>
     );
