@@ -14,7 +14,7 @@ class Outside extends Component {
   handleShowTooltip() {
     this.setState({isTooltipActive: true});
   }
-  
+
   handleHideTooltip() {
     this.setState({isTooltipActive: false});
   }
