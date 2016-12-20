@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Tooltip extends React.Component {
+class Tooltip extends Component {
   constructor(props) {
     super(props);
     this.handleShowTooltip = this.handleShowTooltip.bind(this);
@@ -17,19 +17,12 @@ class Tooltip extends React.Component {
   }
 
   render() {
-    let tooltip;
     const isActiveTooltip = this.state.isTooltipActive;
-
-    if (isActiveTooltip) {
-      tooltip = <p>I am a tooltip</p>;
-    } else {
-      tooltip = null;
-    }
 
     return (
       <div>
         <span onMouseOver={this.handleShowTooltip} onMouseOut={this.handleHideTooltip} >Hello</span>
-        {tooltip}
+        {isActiveTooltip && this.props.children}
       </div>
     );
   }

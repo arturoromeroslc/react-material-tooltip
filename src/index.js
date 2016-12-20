@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Tooltip from './Tooltip';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <Tooltip>I am a child</Tooltip>,
   document.getElementById('root')
 );
